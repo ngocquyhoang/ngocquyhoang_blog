@@ -10,6 +10,30 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+@font-face {
+	font-family: 'Hero';
+	src: font-url('hero.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Linotte';
+	src: font-url('linotte-light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Stag';
+	src: font-url('stag-light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*import file in here*/
+
+p{
+	font-family: 'Stag';
+	font-size: 16px;
+}

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>NgocquyhoangBlog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html  lang="en">
+	<head>
+		<title>Ngocquyhoang 's Blog</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+		<%= favicon_link_tag 'favico.png', type: 'image/png' %>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	</head>
+		<body>
+		
+			<%= yield %>
 
-<%= yield %>
-
-</body>
+		</body>
 </html>
