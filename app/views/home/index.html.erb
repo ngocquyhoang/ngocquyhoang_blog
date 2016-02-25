@@ -1,5 +1,64 @@
-<div class="container-fluid">
-	<div class="row">
-		<p>Customize</p>
+<div class="row" id="landing-page">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="row landing-image">
+			<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-2 col-md-offset-5">
+				<%= image_tag("logo-black.png", alt: "ngoc quy hoang logo", class: "main-logo") %>
+			</div>
+		</div>
+		<div class="row landing-title">
+			<h1 class="title-text">Web Developer</h1>
+		</div>
+		<div class="row landing-description">
+			<p>" Think big - do small " . I am a web developer and UX designer. Computer and children's literature is my hobbies.</p>
+			<p>Connect to me on social network.</p>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<ul class="list-unstyled list-inline social">
+					<li>
+						<a href="https://github.com/ngocquyhoang" title="github-ngocquyhoang" target="blank">
+							<i class="fa fa-3x fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/ngocquyhoang.93" title="facebook-ngocquyhoang" target="blank">
+							<i class="fa fa-3x fa-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/malloryandbob" title="twitter-ngocquyhoang" target="blank">
+							<i class="fa fa-3x fa-twitter"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+</div>
+<div class="row" id="nav-menu">
+	<div class="navbar navbar-default" role="navigation">
+		<div class="container">		
+			<div class="navbar-header">
+				<button id="nav-reponsive-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" id="nav-logo">
+					<%= image_tag("logo-black.png", alt: "ngoc quy hoang logo", class: "nav-logo-small") %>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#"><i class="fa fa-user"></i> About</a></li>
+					<li><a href="#"><i class="fa fa-graduation-cap"></i> Resume</a></li>
+					<li><a href="#"><i class="fa fa-star"></i> Work</a></li>
+					<li><a href="#"><i class="fa fa-book"></i> Contact</a></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<p>NODMODMDOMD</p>
 </div>

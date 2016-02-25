@@ -2,15 +2,29 @@
 <html  lang="en">
 	<head>
 		<title>Ngocquyhoang 's Blog</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<%= favicon_link_tag 'favico.png', type: 'image/png' %>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
-		<%= favicon_link_tag 'favico.png', type: 'image/png' %>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script type="text/javascript">
+			$(window).load(function() {
+				$(".pre-loader").fadeOut(696);
+				// alert($(window).width());
+			})
+		</script>
 	</head>
 		<body>
-		
-			<%= yield %>
-
+			<div class="container-fluid">
+				<!-- pre loaded -->
+				<div class="pre-loader"></div>
+				<!-- body -->
+				<%= yield %>
+				<!-- footer -->
+				<div class="row footer-section">
+					<p>© Design by <a href="#">Zorba</a> .All rights reserved.</p>
+				</div>
+			</div>
 		</body>
 </html>
