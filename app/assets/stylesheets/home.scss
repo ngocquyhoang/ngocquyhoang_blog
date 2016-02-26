@@ -1,14 +1,13 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/*header*/
+
 #landing-page{
-	/*self setting*/
 	padding: 100px 0;
 	color: #fff;
 	height: 100vh;
-	background-image: asset-url('bg-1.jpg');
-	background-position: center top; 
+	background-image: asset-url('bg-1-desktop-1051x699-black.jpg');
+	background-position: center; 
 	.landing-image{
 		.main-logo{
 			width: 100%;
@@ -50,7 +49,9 @@
 		}
 	}
 }
-#nav-menu{
+// nav menu
+#nav-menu, #nav-menu-sticky-wrapper{
+	z-index: 99;
 	#nav-reponsive-button{
 		border-radius: 0px;
 	}
@@ -88,9 +89,166 @@
 	height: 2px;
 	border-bottom: 1px solid #ddd;
 }
+// about page
+#about-me{
+	padding: 110px 0;
+	h2{
+		font-size: 50px;
+		margin-bottom: 90px;
+		position: relative;
+	}
+	h2::after{
+		content: "";
+		background: asset-url('section-divider.png') no-repeat 0 0;
+		height: 15px;
+		width: 113px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -40px;
+		margin: 0 auto;
+	}
+	#my-infomation{
+		.biography{
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			border: 1px solid #ddd;
+			position: relative;
+			.my-photo{
+				position: relative;
+				background: asset-url('photo-frame.png') bottom center no-repeat;
+				background-size: contain;
+				img{
+					width: 100%;
+					z-index: -1;
+					position: relative;
+				}
+			}
+			.list-info{
+				padding: 25px 20px 30px 20px;
+				li{
+					padding: 5px 0;
+					font-size: 18px;
+					border-bottom: 1px solid #ddd;
+					line-height: 28px;
+					font-family: 'ostrich-content';
+					letter-spacing: 3px;
+					.info-tit{
+						letter-spacing: normal;
+						font-family: 'Hero';
+						font-size: 16px
+					}
+				}
+			}
+		}
+		.biography::after{
+			content: "";
+			border-bottom: 1px solid #ddd;
+			position: absolute;
+			bottom: -3px;
+			width: 100%;
+			border-radius: 10px;
+			height: 20px;
+		}
+	}
+	#my-description{
+		h3{
+			font-size: 30px;
+			margin-bottom: 29px;
+			font-family: 'ostrich-content';
+			font-weight: bold;
+			padding-left: 15px;
+			letter-spacing: 4px;
+			color: #333333;
+		}
+		p{
+			padding-bottom: 10px;
+			font-size: 18px;
+			font-family: 'Hero';
+			.strong-text{
+				font-size: 40px;
+			}
+		}
+		.send-message{
+			margin: 40px 0 30px;
+			a{
+				font-size: 20px;
+				background-color: #007AFF;
+				font-family: 'ostrich-content';
+				letter-spacing: 4px;
+				padding: 15px 25px;
+				border: 0px solid #555555;
+				i{
+					margin-right: 12px;
+				}
+			}
+		}
+	}
+}
+// resume
+#resume{
+	padding: 110px 0 ;
+	h2{
+		font-size: 50px;
+		margin-bottom: 90px;
+		position: relative;
+	}
+	h2::after{
+		content: "";
+		background: asset-url('section-divider.png') no-repeat 0 0;
+		height: 15px;
+		width: 113px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -40px;
+		margin: 0 auto;
+	}
+}
+// work
+#work{
+	padding: 110px 0 ;
+	h2{
+		font-size: 50px;
+		margin-bottom: 90px;
+		position: relative;
+	}
+	h2::after{
+		content: "";
+		background: asset-url('section-divider.png') no-repeat 0 0;
+		height: 15px;
+		width: 113px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -40px;
+		margin: 0 auto;
+	}
+}
+// contact
+#contact{
+	padding: 110px 0 ;
+	h2{
+		font-size: 50px;
+		margin-bottom: 90px;
+		position: relative;
+	}
+	h2::after{
+		content: "";
+		background: asset-url('section-divider.png') no-repeat 0 0;
+		height: 15px;
+		width: 113px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -40px;
+		margin: 0 auto;
+	}
+}
 // reponsive for home page
-@media (max-width: 374px) { 
+@media (max-width: 420px) { 
 	#landing-page{
+		background-image: asset-url('bg-1-desktop-461x544-black.jpg');
 		height: auto;
 		padding: 20px 0;
 		.landing-title{
@@ -101,7 +259,8 @@
 	}
 }
 // for 6 and 6 plus
-@media (min-width: 375px) and (max-width: 768px){
+@media (min-width: 421px) and (max-width: 768px){
+	background-image: asset-url('bg-1-desktop-1051x699-black.jpg');
 	#landing-page{
 		height: auto;
 		padding: 55px 0;
@@ -133,5 +292,23 @@
 		}
 	}
  }
-@media (min-width: 992px) and (max-width: 1200px) { }
-@media (min-width: 1200px){ }
+@media (min-width: 992px) and (max-width: 1200px) { 
+	#landing-page{
+		background-image: asset-url('bg-1-desktop-1239x864-black.jpg');
+	}
+}
+@media (min-width: 1200px) and (max-width: 1600px) { 
+	#landing-page{
+		background-image: asset-url('bg-1-desktop-1600x1065-black.jpg');
+	}
+}
+@media (min-width: 1600px) and (max-width: 1900px) { 
+	#landing-page{
+		background-image: asset-url('bg-1-desktop-1991x1326-black.jpg');
+	}
+}
+@media (min-width: 1900px) { 
+	#landing-page{
+		background-image: asset-url('bg-1-desktop-2669x1777-black.jpg');
+	}
+}
