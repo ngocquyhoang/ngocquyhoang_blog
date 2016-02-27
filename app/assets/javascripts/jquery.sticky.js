@@ -85,7 +85,7 @@
                 newWidth = s.stickyElement.width();
             }
             s.stickyElement
-              .css('width', '100%')
+              .css('width', newWidth)
               .css('position', 'fixed')
               .css('top', newTop);
 

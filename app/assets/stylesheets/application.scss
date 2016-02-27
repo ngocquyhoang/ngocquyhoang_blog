@@ -15,6 +15,7 @@
 @import "bootstrap";
 /*import file in here*/
 @import 'home.scss';
+@import 'animate.scss';
 
 @font-face {
 	font-family: 'Hero';
@@ -80,4 +81,10 @@ html, body{
 			color: #007AFF;
 		}
 	}
+}
+.ngocquy_hidden{
+	opacity:0;
+}
+.ngocquy_visible{
+	opacity:1;
 }

@@ -50,7 +50,7 @@
 	}
 }
 // nav menu
-#nav-menu, #nav-menu-sticky-wrapper{
+#nav-menu{
 	z-index: 99;
 	#nav-reponsive-button{
 		border-radius: 0px;
@@ -176,6 +176,7 @@
 				background-color: #007AFF;
 				font-family: 'ostrich-content';
 				letter-spacing: 4px;
+				font-weight: bold;
 				padding: 15px 25px;
 				border: 0px solid #555555;
 				i{
@@ -203,6 +204,103 @@
 		right: 0;
 		bottom: -40px;
 		margin: 0 auto;
+	}
+	.resume-tittle{
+		font-size: 35px;
+		font-family: 'Hero';
+		margin-bottom: 30px;
+	}
+	.resume::before{
+		content: "";
+		position: absolute;
+		top: -5px;
+		width: 12px;
+		height: 12px;
+		background-color: #e1e1e1;
+		left: 50%;
+		border-radius: 12px;
+		margin-left: -6px;
+	}
+	.resume{
+		position: relative;
+		.time-line::before{
+			left: 50%;
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			margin-left: -1px;
+			background-color: #e1e1e1;
+		}
+		.time-line{
+			position: relative;
+			padding: 0;
+			list-style: none;
+			li{
+				margin-bottom: 15px;
+				min-height: 100px;
+				position: relative;
+				.event-time{
+					left: 50%;
+					width: 160px;
+					margin-left: -80px;
+					margin-top: 30px;
+					position: absolute;
+					text-align: center;
+					background-color: #fff;
+					padding: 5px 0;
+					span{
+						font-size: 20px;
+						font-family: 'Hero';
+					}
+				}
+				.event-panel::before{
+					left: 100%;
+					border-left: 12px solid #ECECEC;
+					border-top: 10px solid transparent;
+					border-bottom: 10px solid transparent;
+					-webkit-transition: all 400ms;
+					-moz-transition: all 400ms;
+					-o-transition: all 400ms;
+					transition: all 400ms;
+					content: "";
+					top: 25px;
+					position: absolute;
+					// right: auto;
+				}
+				.event-panel{
+					float: left;
+					width: 43%;
+					text-align: right;
+					border: 1px solid #eee;
+					position: relative;
+					.event-panel-content{
+						position: relative;
+						padding: 24px;
+						background-color: #fff;
+						-webkit-transition: all 400ms;
+						-moz-transition: all 400ms;
+						-o-transition: all 400ms;
+						transition: all 400ms;
+					}
+				}
+				.event-panel::after{
+					
+				}
+			}
+		}
+	}
+	.resume::after{
+		content: "";
+		position: absolute;
+		bottom: -5px;
+		width: 12px;
+		height: 12px;
+		background-color: #e1e1e1;
+		left: 50%;
+		border-radius: 12px;
+		margin-left: -6px;
 	}
 }
 // work
@@ -257,6 +355,18 @@
 			}
 		}
 	}
+	#about-me{
+		padding: 50px 0 ;
+	}
+	#resume{
+		padding: 50px 0 ;
+	}
+	#work{
+		padding: 50px 0 ;
+	}
+	#contact{
+		padding: 50px 0 ;
+	}
 }
 // for 6 and 6 plus
 @media (min-width: 421px) and (max-width: 768px){
@@ -269,6 +379,18 @@
 				margin: 25px 0 35px;
 			}
 		}
+	}
+	#about-me{
+		padding: 80px 0 ;
+	}
+	#resume{
+		padding: 80px 0 ;
+	}
+	#work{
+		padding: 80px 0 ;
+	}
+	#contact{
+		padding: 80px 0 ;
 	}
 }
 @media (min-width: 768px) and (max-width: 992px) { 
