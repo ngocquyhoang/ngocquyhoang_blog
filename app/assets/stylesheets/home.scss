@@ -301,11 +301,11 @@
 					}
 				}
 				.event-panel:hover{
-					background-color: #224455;
+					background-color: #333333;
 					color: #fff;
 				}
 				.event-panel:hover:before{
-					border-left: 12px solid #224455;
+					border-left: 12px solid #333333;
 				}
 			}
 			li.time-inverted{
@@ -331,7 +331,7 @@
 					border-left-width: 0;
 				}
 				.event-panel:hover:before{
-					border-right-color: #224455;
+					border-right-color: #333333;
 				}
 			}
 		}
@@ -350,6 +350,7 @@
 }
 // work
 #work{
+	background-color: #F2F1ED;
 	padding: 110px 0 ;
 	h2{
 		font-size: 50px;
@@ -366,6 +367,42 @@
 		right: 0;
 		bottom: -40px;
 		margin: 0 auto;
+	}
+	.work_el{
+		h3{
+			font-size: 35px;
+			font-family: 'Hero';
+			margin-bottom: 50px;
+		}
+		.skill-progress{
+			position: relative;
+			.skill-title{
+				width: 25%;
+				float: left;
+				h4{
+					font-size: 23px;
+					font-weight: normal;
+					margin-top: -6px;
+				}
+			}
+			.progress{
+				height: 10px;
+				margin-bottom: 45px;
+				background-color: #DBDDDE;
+				border-radius: 3px;
+				box-shadow: none;
+				width: 75%;
+				.progress-bar{
+					background-color: #4CD964;
+					span{
+						position: absolute;
+						top: -20px;
+						right: 15px;
+						color: #282828;
+					}
+				}
+			}
+		}
 	}
 }
 // contact
