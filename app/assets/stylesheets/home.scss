@@ -404,13 +404,57 @@
 		padding: 50px 0 ;
 	}
 	#resume{
-		padding: 50px 0 ;
+		padding: 0 0 50px 0 ;
 	}
 	#work{
 		padding: 50px 0 ;
 	}
 	#contact{
 		padding: 50px 0 ;
+	}
+}
+// reponsive time line
+@media (max-width: 992px) { 
+	#resume{
+		.resume::before{
+			left: 5px;
+		}
+		.resume{
+			.time-line::before{
+				left: 5px;
+			}
+			.time-line{
+				li{
+					.event-time{
+						position: relative;
+						left: 25px;
+						text-align: left;
+						margin-left: 0px;
+						margin-top: 15px;
+					}
+					.event-panel{
+						width: auto;
+						text-align: left;
+						margin-left: 20px;
+						background-color: #fff;
+						border: 1px solid #fff;
+						.event-panel-content{
+							padding: 15px 0;
+						}
+					}
+					.event-panel::before{
+						display: none;
+					}
+					.event-panel:hover{
+						color: #282828;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+		.resume::after{
+			left: 5px;
+		}
 	}
 }
 // for 6 and 6 plus
@@ -429,7 +473,7 @@
 		padding: 80px 0 ;
 	}
 	#resume{
-		padding: 80px 0 ;
+		padding: 0 0 80px 0 ;
 	}
 	#work{
 		padding: 80px 0 ;
