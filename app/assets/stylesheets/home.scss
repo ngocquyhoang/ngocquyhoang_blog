@@ -116,11 +116,11 @@
 			position: relative;
 			.my-photo{
 				position: relative;
-				background: asset-url('photo-frame.png') bottom center no-repeat;
+				// background: asset-url('photo-frame.png') bottom center no-repeat;
 				background-size: contain;
 				img{
 					width: 100%;
-					z-index: -1;
+					// z-index: 0;
 					position: relative;
 				}
 			}
@@ -188,7 +188,7 @@
 }
 // resume
 #resume{
-	padding: 110px 0 ;
+	padding: 0 0 110px 0 ;
 	h2{
 		font-size: 50px;
 		margin-bottom: 90px;
@@ -234,10 +234,19 @@
 			background-color: #e1e1e1;
 		}
 		.time-line{
+			margin-bottom: 50px;
 			position: relative;
 			padding: 0;
 			list-style: none;
+			li::before, li::after{
+				content: " ";
+				display: table;
+			}
+			li::after{
+				clear: both;
+			}
 			li{
+				display: list-item;
 				margin-bottom: 15px;
 				min-height: 100px;
 				position: relative;
@@ -257,7 +266,7 @@
 				}
 				.event-panel::before{
 					left: 100%;
-					border-left: 12px solid #ECECEC;
+					border-left: 12px solid #f2f2f2;
 					border-top: 10px solid transparent;
 					border-bottom: 10px solid transparent;
 					-webkit-transition: all 400ms;
@@ -265,28 +274,64 @@
 					-o-transition: all 400ms;
 					transition: all 400ms;
 					content: "";
-					top: 25px;
+					top: 37px;
 					position: absolute;
-					// right: auto;
 				}
 				.event-panel{
 					float: left;
 					width: 43%;
 					text-align: right;
-					border: 1px solid #eee;
+					border: 1px solid #f2f2f2;
 					position: relative;
+					background-color: #f2f2f2;
+					-webkit-transition: all 400ms;
+					-moz-transition: all 400ms;
+					-o-transition: all 400ms;
+					transition: all 400ms;
 					.event-panel-content{
 						position: relative;
 						padding: 24px;
-						background-color: #fff;
-						-webkit-transition: all 400ms;
-						-moz-transition: all 400ms;
-						-o-transition: all 400ms;
-						transition: all 400ms;
+						h4{
+							font-size: 20px;
+							font-weight: bold;
+						}
+						p{
+							font-size: 18px;
+						}
 					}
 				}
-				.event-panel::after{
-					
+				.event-panel:hover{
+					background-color: #224455;
+					color: #fff;
+				}
+				.event-panel:hover:before{
+					border-left: 12px solid #224455;
+				}
+			}
+			li.time-inverted{
+				.event-panel{
+					float: right;
+					text-align: left;
+				}
+				.event-panel::before{
+					right: 100%;
+					border-right: 12px solid #f2f2f2;
+					border-top: 10px solid transparent;
+					border-bottom: 10px solid transparent;
+					-webkit-transition: all 400ms;
+					-moz-transition: all 400ms;
+					-o-transition: all 400ms;
+					transition: all 400ms;
+					content: "";
+					top: 37px;
+					position: absolute;
+					right: auto;
+					left: -15px;
+					border-right-width: 15px;
+					border-left-width: 0;
+				}
+				.event-panel:hover:before{
+					border-right-color: #224455;
 				}
 			}
 		}
