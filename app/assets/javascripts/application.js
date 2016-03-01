@@ -15,3 +15,49 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+jQuery(function ($) {
+	/*-------------------------------------------------------------------*/
+	/*              Progress bar Javascript                   */
+	/*-------------------------------------------------------------------*/
+	$('.skill-progress').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+		if (visible) {
+			var thisSkill = $(this).find('.progress-bar.six-sec-ease-in-out');
+			thisSkill.css('width', thisSkill.attr('aria-valuenow')+'%');
+			$(this).unbind('inview');
+		}
+	});
+	/*-------------------------------------------------------------------*/
+	/*                         Back to top button                             */
+	/*-------------------------------------------------------------------*/
+	
+	/*-------------------------------------------------------------------*/
+	/*                              Project done                                 */
+	/*-------------------------------------------------------------------*/
+	(function () {
+		var $grid = $('#grid');
+		$grid.shuffle({
+			itemSelector: '.portfolio-item'
+		});
+		/* reshuffle when user clicks a filter item */
+		$('#filter a').click(function (e) {
+			e.preventDefault();
+			// set active class
+			$('#filter a').removeClass('active');
+			$(this).addClass('active');
+			// get group name from clicked item
+			var groupName = $(this).attr('data-group');
+			// reshuffle grid
+			$grid.shuffle('shuffle', groupName );
+		});
+	}());
+
+	setTimeout(function(){ 
+		var $grid = $('#grid');
+		$grid.shuffle({
+			itemSelector: '.portfolio-item'
+		});
+		console.log('ok');
+		$grid.shuffle('shuffle', 'all' );
+	}, 69);
+
+})

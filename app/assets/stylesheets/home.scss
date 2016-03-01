@@ -377,7 +377,7 @@
 		.skill-progress{
 			position: relative;
 			.skill-title{
-				width: 25%;
+				width: 30%;
 				float: left;
 				h4{
 					font-size: 23px;
@@ -391,7 +391,7 @@
 				background-color: #DBDDDE;
 				border-radius: 3px;
 				box-shadow: none;
-				width: 75%;
+				width: 70%;
 				.progress-bar{
 					background-color: #4CD964;
 					span{
@@ -400,6 +400,130 @@
 						right: 15px;
 						color: #282828;
 					}
+				}
+				.progress-bar.six-sec-ease-in-out{
+					-webkit-transition: width 2s ease-in-out;
+					-moz-transition: width 2s ease-in-out;
+					-o-transition: width 2s ease-in-out;
+					transition: width 2s ease-in-out;
+				}
+			}
+		}
+	}
+	.project{
+		ul{
+			margin: 0 0 35px;
+			text-align: center;
+			li{
+				display: inline-block;
+				padding-right: 5px;
+				padding-left: 5px;
+				margin-bottom: 25px;
+				a{
+					display: block;
+					padding: 3px 18px 1px;
+					border-radius: 4px;
+					color: #34AADC;
+					font-size: 20px;
+					font-family: 'Hero';
+					text-decoration: none;
+				}
+				a.active, :hover{
+					position: relative;
+					background: #34AADC;
+					border-bottom: 4px solid #224455;
+					color: #fff;
+				}
+			}
+		}
+		#grid{
+			padding-right: 5px;
+			padding-left: 5px;
+			min-height: 235px;
+			position: relative;
+			.portfolio-item{
+				display: inline-block;
+			}
+			.portfolio-bg {
+				background: #fff;
+				padding: 5px;
+				margin-bottom: 20px;
+				border: 1px solid #eee;
+				border-bottom: 3px double #eee;
+				.portfolio {
+					position: relative;
+					overflow: hidden;
+					.tt-overlay {
+						position: absolute;
+						background-color: rgba(26, 30, 31, 0.85);
+						width: 100%;
+						height: 100%;
+						opacity: 0;
+						transition: all 400ms;
+					}
+					.links {
+						width: 90px;
+						height: 40px;
+						position: absolute;
+						top: 40%;
+						left: 50%;
+						margin-top: -20px;
+						margin-left: -45px;
+						opacity: 0;
+						-webkit-transform: translate(0,-50px);
+						-moz-transform: translate(0,-50px);
+						-ms-transform: translate(0,-50px);
+						-o-transform: translate(0,-50px);
+						transform: translate(0,-50px);
+						text-align: center;
+						transition: all 400ms;
+						a{
+							color: #34AADC;
+							width: 40px;
+							height: 40px;
+							margin: 0 auto;
+							border: 1px solid #34AADC;
+							display: block;
+							padding-top: 10px;
+							border-radius: 4px;
+							font-size: 15px;
+							transition: all 400ms;
+						}
+						a:hover{
+							background-color: #34AADC;
+							color: #fff;
+						}
+					}
+					img{
+						width: 100%;
+					}
+					.portfolio-info {
+						position: absolute;
+						bottom: -100%;
+						left: 0;
+						background-color: #34AADC;
+						color: #fff;
+						height: 45px;
+						width: 100%;
+						text-align: center;
+						transition: all 400ms;
+						h3{
+							font-size: 18px;
+							line-height: 45px;
+							margin: 0;
+						}
+					}
+				}
+				.portfolio:hover .tt-overlay, .portfolio:hover .links {
+					opacity: 1;
+					-webkit-transform: translate(0,0);
+					-moz-transform: translate(0,0);
+					-ms-transform: translate(0,0);
+					-o-transform: translate(0,0);
+					transform: translate(0,0);
+				}
+				.portfolio:hover .portfolio-info{
+					bottom: 0;
 				}
 			}
 		}
@@ -445,6 +569,16 @@
 	}
 	#work{
 		padding: 50px 0 ;
+		.work_el{
+			.skill-progress{
+				.skill-title{
+					width: 45%;
+				}
+				.progress{
+					width: 55%;
+				}
+			}
+		}
 	}
 	#contact{
 		padding: 50px 0 ;
@@ -454,11 +588,11 @@
 @media (max-width: 992px) { 
 	#resume{
 		.resume::before{
-			left: 5px;
+			left: 10px;
 		}
 		.resume{
 			.time-line::before{
-				left: 5px;
+				left: 10px;
 			}
 			.time-line{
 				li{
@@ -490,7 +624,7 @@
 			}
 		}
 		.resume::after{
-			left: 5px;
+			left: 10px;
 		}
 	}
 }
@@ -514,6 +648,16 @@
 	}
 	#work{
 		padding: 80px 0 ;
+		.work_el{
+			.skill-progress{
+				.skill-title{
+					width: 40%;
+				}
+				.progress{
+					width: 60%;
+				}
+			}
+		}
 	}
 	#contact{
 		padding: 80px 0 ;
@@ -539,6 +683,19 @@
 			}
 		}
 	}
+	#work{
+		padding: 50px 0 ;
+		.work_el{
+			.skill-progress{
+				.skill-title{
+					width: 35%;
+				}
+				.progress{
+					width: 65%;
+				}
+			}
+		}
+	}
  }
 @media (min-width: 992px) and (max-width: 1200px) { 
 	#landing-page{
@@ -548,6 +705,19 @@
 @media (min-width: 1200px) and (max-width: 1600px) { 
 	#landing-page{
 		background-image: asset-url('bg-1-desktop-1600x1065-black.jpg');
+	}
+	#work{
+		padding: 50px 0 ;
+		.work_el{
+			.skill-progress{
+				.skill-title{
+					width: 25%;
+				}
+				.progress{
+					width: 75%;
+				}
+			}
+		}
 	}
 }
 @media (min-width: 1600px) and (max-width: 1900px) { 
