@@ -29,7 +29,15 @@ jQuery(function ($) {
 	/*-------------------------------------------------------------------*/
 	/*                         Back to top button                             */
 	/*-------------------------------------------------------------------*/
-	
+	(function () {
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$('.scroll-up').fadeIn();
+			} else {
+				$('.scroll-up').fadeOut();
+			}
+		});
+	}());
 	/*-------------------------------------------------------------------*/
 	/*                              Project done                                 */
 	/*-------------------------------------------------------------------*/
@@ -56,8 +64,92 @@ jQuery(function ($) {
 		$grid.shuffle({
 			itemSelector: '.portfolio-item'
 		});
-		console.log('ok');
 		$grid.shuffle('shuffle', 'all' );
-	}, 69);
-
+	}, 100);
+	/*------------------------------------------------------------------------*/
+	/*                                    Sticky menu                                 */
+	/*------------------------------------------------------------------------*/
+	jQuery(document).ready(function($) {
+		$("#nav-menu").sticky({topSpacing:0});
+		jQuery('.ngocquy_post').addClass("ngocquy_hidden").viewportChecker({
+			classToAdd: 'ngocquy_visible animated fadeInUp', 
+			offset: 100,
+		});
+	});
+	/*fadeInDown flipInX bounceInUp*/
+	/*------------------------------------------------------------------------*/
+	/*                                    Send message                               */
+	/*------------------------------------------------------------------------*/
+	$('#contact #submit_contact_form').click(function(event) {
+		$('#contact .contact_el').removeClass('error success');
+		var name = $('#contact input[name="name"]');
+		var email = $('#contact input[name="email"]');
+		var subject = $('#contact input[name="subject"]');
+		var message = $('#contact textarea[name="message"]');
+		if (name.val() !== "" ) {
+			name.addClass('success');
+		} else{
+			name.addClass('error');
+		};
+		if (email.val() !== "" ) {
+			if (validateEmail(email.val())) {
+				email.addClass('success');
+			} else{
+				email.addClass('error');
+			};
+		} else{
+			email.addClass('error');
+		};
+		if (subject.val() !== "" ) {
+			subject.addClass('success');
+		} else{
+			subject.addClass('error');
+		};
+		if (message.val() !== "" ) {
+			message.addClass('success');
+		} else{
+			message.addClass('error');
+		};
+		var suc_arr = $('#contact .row .success');
+		if (suc_arr.length == 4) {
+			$.ajax({
+				url: "send_message",
+				type: "POST",
+				data: {"name": name.val(), "email": email.val(), "subject": subject.val(), "message": message.val()},
+				success: function(data) {
+					if (typeof data["notice"] != 'undefined') {
+						location.reload();
+					};
+				}
+			});
+		} ;
+	});
+	/*------------------------------------------------------------------------*/
+	/*                                    Smooth scroll                               */
+	/*------------------------------------------------------------------------*/
+	(function () {
+		$('.smooth_scroll').bind("click", function(e){
+			var anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $(anchor.attr('href')).offset().top
+			}, 1000);
+			e.preventDefault();
+		});
+	}());
+	/*------------------------------------------------------------------------*/
+	/*                                 add active class                               */
+	/*------------------------------------------------------------------------*/
+	$('#nav-menu ul li').click(function(event) {
+		$('#nav-menu ul li').removeClass('active');
+		$(this).addClass('active');
+		if ($('#nav-reponsive-button').css('display') == 'block') {
+			setTimeout(function(){ 
+				$('#nav-reponsive-button').click();
+			}, 1000);
+		};
+	});
 })
+function validateEmail(email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+}

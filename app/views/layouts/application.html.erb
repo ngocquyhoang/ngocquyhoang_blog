@@ -11,17 +11,15 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$(".pre-loader").fadeOut(696);
+				if ($(window).scrollTop() !== 0) {
+					setTimeout(function(){ 
+						$('html, body').stop().animate({
+							scrollTop: $('.container-fluid').offset().top
+						}, 1000);
+					}, 500);
+				};
+				
 			});
-			$(document).ready(function(){
-				$("#nav-menu").sticky({topSpacing:0});
-				jQuery('.ngocquy_post').addClass("ngocquy_hidden").viewportChecker({
-					classToAdd: 'ngocquy_visible animated fadeInUp', 
-					offset: 100,
-				});   
-			});
-			// fadeInDown
-			// flipInX
-			// bounceInUp
 		</script>
 	</head>
 		<body>

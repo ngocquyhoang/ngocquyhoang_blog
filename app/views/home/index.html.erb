@@ -52,10 +52,12 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#about-me"><i class="fa fa-user"></i> About</a></li>
-					<li><a href="#resume"><i class="fa fa-graduation-cap"></i> Resume</a></li>
-					<li><a href="#work"><i class="fa fa-star"></i> Work</a></li>
-					<li><a href="#contact"><i class="fa fa-book"></i> Contact</a></li>
+					<li class="active"><a href="#landing-page" class="smooth_scroll"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#about-me" class="smooth_scroll"><i class="fa fa-user"></i> About</a></li>
+					<li><a href="#resume" class="smooth_scroll"><i class="fa fa-graduation-cap"></i> Resume</a></li>
+					<li><a href="#work" class="smooth_scroll"><i class="fa fa-star"></i> Work</a></li>
+					<li><a href="#" class="smooth_scrollsss"><i class="fa fa-heartbeat"></i> Blog</a></li>
+					<li><a href="#contact" class="smooth_scroll"><i class="fa fa-book"></i> Contact</a></li>
 				</ul>
 				<div class="clearfix"></div>
 			</div>
@@ -64,47 +66,45 @@
 </div>
 </div>
 <!-- about me -->
-<div id="about-me">
-	<div class="container">
-		<h2 class="text-center ngocquy_post"><i class="fa fa-user"></i> About me</h2>
-		<!-- hr line -->
-		<div class="row">
-			<div class="col-md-4 col-md-push-8" id="my-infomation">
-				<div class="biography">
-					<div class="my-photo">
-						<%= image_tag("avatar.jpg", alt: "ngoc quy hoang avatar", class: "") %>
-					</div>
-					<!-- my infomation -->
-					<ul class="list-unstyled list-info">
-						<li><span class="info-tit">Name:</span> Hoang Ngoc Quy</li>
-						<li><span class="info-tit">Date of birth:</span> 29 Nov 1993</li>
-						<li><span class="info-tit">Address:</span> Nam tu liem, Ha noi</li>
-						<li><span class="info-tit">Nationality:</span> Viet Nam</li>
-						<li><span class="info-tit">Phone:</span> (+84) 96 414 98 43</li>
-						<li><span class="info-tit">Email:</span> contact@ngocquyhoang.com</li>
-					</ul>
+<div class="container" id="about-me">
+	<h2 class="text-center ngocquy_post"><i class="fa fa-user"></i> About me</h2>
+	<!-- hr line -->
+	<div class="row">
+		<div class="col-md-4 col-md-push-8" id="my-infomation">
+			<div class="biography">
+				<div class="my-photo">
+					<%= image_tag("avatar.jpg", alt: "ngoc quy hoang avatar", class: "") %>
 				</div>
+				<!-- my infomation -->
+				<ul class="list-unstyled list-info">
+					<li><span class="info-tit">Name:</span> Hoang Ngoc Quy</li>
+					<li><span class="info-tit">Date of birth:</span> 29 Nov 1993</li>
+					<li><span class="info-tit">Address:</span> Nam tu liem, Ha noi</li>
+					<li><span class="info-tit">Nationality:</span> Viet Nam</li>
+					<li><span class="info-tit">Phone:</span> (+84) 96 414 98 43</li>
+					<li><span class="info-tit">Email:</span> contact@ngocquyhoang.com</li>
+				</ul>
 			</div>
-			<div class="col-md-8 col-md-pull-4" id="my-description">
-				<div class="who-am-i ngocquy_post">
-					<h3>WHO AM I</h3>
-					<p>
-						<span class="strong-text">H</span>ello !. My name is Hoang Ngoc Quy. I'm a Web developer.
-						Now I study in Hanoi University of Science and Technology. My major is Information Technology and I learn Japanese too. 
-						My hobbies is walking in park and read book. "Rich dad poor dad" is book that I like most. When I have a free time - I create a my "Pet project", relax and thinking idea for next "Pet project".
-					</p>
-				</div>
-				<div class="my-objective ngocquy_post">
-					<h3>OBJECTIVE</h3>
-					<p><span class="strong-text">I</span> focus to upgrade oneself, wish to contribute to high-quality products to the community. I'm presently expanding my experience in Rails and UX design. I hope to develop skills with Rails and my knowledge of the UX design.</p>
-				</div>
-				<div class="what-i-do ngocquy_post">
-					<h3>WHAT I DO?</h3>
-					<p><span class="strong-text">I</span> have been working as a Web developer. I have a love of thin, clean and elegant styling - look like Mac OS.</p>
-				</div>
-				<div class="row text-center send-message ngocquy_post">
-					<a class="btn btn-primary btn-lg" href="#contact" title=""><i class="fa fa-paper-plane-o"></i> Send me message</a>
-				</div>
+		</div>
+		<div class="col-md-8 col-md-pull-4" id="my-description">
+			<div class="who-am-i ngocquy_post">
+				<h3>WHO AM I</h3>
+				<p>
+					<span class="strong-text">H</span>ello !. My name is Hoang Ngoc Quy. I'm a Web developer.
+					Now I study in Hanoi University of Science and Technology. My major is Information Technology and I learn Japanese too. 
+					My hobbies is walking in park and read book. "Rich dad poor dad" is book that I like most. When I have a free time - I create a my "Pet project", relax and thinking idea for next "Pet project".
+				</p>
+			</div>
+			<div class="my-objective ngocquy_post">
+				<h3>OBJECTIVE</h3>
+				<p><span class="strong-text">I</span> focus to upgrade oneself, wish to contribute to high-quality products to the community. I'm presently expanding my experience in Rails and UX design. I hope to develop skills with Rails and my knowledge of the UX design.</p>
+			</div>
+			<div class="what-i-do ngocquy_post">
+				<h3>WHAT I DO?</h3>
+				<p><span class="strong-text">I</span> have been working as a Web developer. I have a love of thin, clean and elegant styling - look like Mac OS.</p>
+			</div>
+			<div class="row text-center send-message ngocquy_post">
+				<a class="btn btn-primary btn-lg smooth_scroll" href="#contact" title=""><i class="fa fa-paper-plane-o"></i> Send me message</a>
 			</div>
 		</div>
 	</div>
@@ -210,242 +210,265 @@
 </div>
 <!-- work -->
 <div id="work">
-<div class="container">
-	<h2 class="text-center ngocquy_post"><i class="fa fa-star"></i> Work</h2>
-	<div class="myskill work_el">
-		<h3 class="text-center">Main skill</h3>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>HTML5/CSS3</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-							<span>75%</span>
+	<div class="container">
+		<h2 class="text-center ngocquy_post"><i class="fa fa-star"></i> Work</h2>
+		<div class="myskill work_el">
+			<h3 class="text-center">Main skill</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>HTML5/CSS3</h4>
 						</div>
-					</div>
-				</div>
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Javascript</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">
-							<span>63%</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Ruby/Rails</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100">
-							<span>51%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>PHP</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
-							<span>42%</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Java</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
-							<span>22%</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>UI/UX Design</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100">
-							<span>36%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="language work_el">
-		<h3 class="text-center">Language</h3>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>English</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
-							<span>38%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Japanese</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-							<span>45%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="other-skill work_el">
-		<h3 class="text-center">More skill</h3>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Management</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100">
-							<span>16%</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Marketing</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100">
-							<span>14%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>Leadership</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
-							<span>22%</span>
-						</div>
-					</div>
-				</div>
-				<div class="skill-progress">
-					<div class="skill-title">
-						<h4>SEO</h4>
-					</div>
-					<div class="progress">
-						<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
-							<span>15%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="project work_el">
-		<h3 class="text-center">Project</h3>
-		<ul class="list-inline" id="filter">
-			<li><a class="active" href="" data-group="all">All</a></li>
-			<li><a class="" href="" data-group="web">Web</a></li>
-			<li><a class="" href="" data-group="theme">Theme</a></li>
-			<li><a class="" href="" data-group="plugin">Plugin</a></li>
-			<li><a class="" href="" data-group="game">Game</a></li>
-		</ul>
-		<div class="row">
-			<div id="grid">
-				<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
-					<div class="portfolio-bg">
-						<div class="portfolio">
-							<div class="tt-overlay"></div>
-							<div class="links">
-								<a href="http://congso.club/" target="blank"><i class="fa fa-link"></i></a>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+								<span>75%</span>
 							</div>
-							<%= image_tag "project.jpg", alt: "project name"%>
-							<div class="portfolio-info">
-								<h3>Congso.club</h3>
+						</div>
+					</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Javascript</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100">
+								<span>63%</span>
+							</div>
+						</div>
+					</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Ruby/Rails</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100">
+								<span>51%</span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "game"]'>
-					<div class="portfolio-bg">
-						<div class="portfolio">
-							<div class="tt-overlay"></div>
-							<div class="links">
-								<a href="http://ngocquyhoang.github.io/game/league-of-legend/" target="blank"><i class="fa fa-link"></i></a>
-							</div>
-							<%= image_tag "project.jpg", alt: "project name"%>
-							<div class="portfolio-info">
-								<h3>League of legend Card</h3>
+				<div class="col-md-6">
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>PHP</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100">
+								<span>42%</span>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "plugin"]'>
-					<div class="portfolio-bg">
-						<div class="portfolio">
-							<div class="tt-overlay"></div>
-							<div class="links">
-								<a href="http://ngocquyhoang.github.io/jquery-plugin/" target="blank"><i class="fa fa-link"></i></a>
-							</div>
-							<%= image_tag "project.jpg", alt: "project name"%>
-							<div class="portfolio-info">
-								<h3>zMessage</h3>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Java</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+								<span>22%</span>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
-					<div class="portfolio-bg">
-						<div class="portfolio">
-							<div class="tt-overlay"></div>
-							<div class="links">
-								<a href="#"><i class="fa fa-link"></i></a>
-							</div>
-							<%= image_tag "project.jpg", alt: "project name"%>
-							<div class="portfolio-info">
-								<h3>D Brandwatcher</h3>
-							</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>UI/UX Design</h4>
 						</div>
-					</div>
-				</div>
-				<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
-					<div class="portfolio-bg">
-						<div class="portfolio">
-							<div class="tt-overlay"></div>
-							<div class="links">
-								<a href="#"><i class="fa fa-link"></i></a>
-							</div>
-							<%= image_tag "project.jpg", alt: "project name"%>
-							<div class="portfolio-info">
-								<h3>Onemetric</h3>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100">
+								<span>36%</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="language work_el">
+			<h3 class="text-center">Language</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>English</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+								<span>38%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Japanese</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+								<span>45%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="other-skill work_el">
+			<h3 class="text-center">More skill</h3>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Management</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100">
+								<span>16%</span>
+							</div>
+						</div>
+					</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Marketing</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100">
+								<span>14%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>Leadership</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+								<span>22%</span>
+							</div>
+						</div>
+					</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>SEO</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+								<span>15%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="project work_el">
+			<h3 class="text-center">Project</h3>
+			<ul class="list-inline" id="filter">
+				<li><a class="active" href="" data-group="all">All</a></li>
+				<li><a class="" href="" data-group="web">Web</a></li>
+				<li><a class="" href="" data-group="theme">Theme</a></li>
+				<li><a class="" href="" data-group="plugin">Plugin</a></li>
+				<li><a class="" href="" data-group="game">Game</a></li>
+			</ul>
+			<div class="row">
+				<div id="grid">
+					<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+						<div class="portfolio-bg">
+							<div class="portfolio">
+								<div class="tt-overlay"></div>
+								<div class="links">
+									<a href="http://congso.club/" target="blank"><i class="fa fa-link"></i></a>
+								</div>
+								<%= image_tag "congso-club.jpg", alt: "Congso.club project"%>
+								<div class="portfolio-info">
+									<h3>Congso.club</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "game"]'>
+						<div class="portfolio-bg">
+							<div class="portfolio">
+								<div class="tt-overlay"></div>
+								<div class="links">
+									<a href="http://ngocquyhoang.github.io/game/league-of-legend/" target="blank"><i class="fa fa-link"></i></a>
+								</div>
+								<%= image_tag "lol-game-card.jpg", alt: "League of Legend Game Card project"%>
+								<div class="portfolio-info">
+									<h3>League of legend Card</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "plugin"]'>
+						<div class="portfolio-bg">
+							<div class="portfolio">
+								<div class="tt-overlay"></div>
+								<div class="links">
+									<a href="http://ngocquyhoang.github.io/jquery-plugin/" target="blank"><i class="fa fa-link"></i></a>
+								</div>
+								<%= image_tag "zmessage.jpg", alt: "zMessage project"%>
+								<div class="portfolio-info">
+									<h3>zMessage</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+						<div class="portfolio-bg">
+							<div class="portfolio">
+								<div class="tt-overlay"></div>
+								<div class="links">
+									<a href="#"><i class="fa fa-link"></i></a>
+								</div>
+								<%= image_tag "d-brand-watcher.jpg", alt: "D brand watcher project"%>
+								<div class="portfolio-info">
+									<h3>D Brandwatcher</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "web"]'>
+						<div class="portfolio-bg">
+							<div class="portfolio">
+								<div class="tt-overlay"></div>
+								<div class="links">
+									<a href="#"><i class="fa fa-link"></i></a>
+								</div>
+								<%= image_tag "ometric.jpg", alt: "onemetric project"%>
+								<div class="portfolio-info">
+									<h3>Onemetric</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
 </div>
 <!-- Contact -->
 <div class="container" id="contact">
 	<h2 class="text-center ngocquy_post"><i class="fa fa-book"></i> Contact</h2>
+	<div class="contact-form row">
+		<h3 class="text-center">Send me a Message</h3>
+		<div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+			<div class="row">
+				<input name="name" type="text" class="form-control contact_el" placeholder="Name" required>
+			</div>
+			<div class="row">
+				<input name="email" type="email" class="form-control contact_el" placeholder="Email" required>
+			</div>
+			<div class="row">
+				<input name="subject" type="text" class="form-control contact_el" placeholder="Subject" required>
+			</div>
+			<div class="row">
+				<textarea name="message" class="form-control contact_el" rows="4" placeholder="Message" required></textarea>
+			</div>
+			<div class="row">
+				<input type="submit" class="form-control" value="Send message" id="submit_contact_form">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="scroll-up">
+	<a href="#landing-page" class="smooth_scroll"><i class="fa fa-angle-up"></i></a>
 </div>
