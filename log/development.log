@@ -5829,3 +5829,3493 @@ Started GET "/assets/avatar-2bdb9e982a2fa4350bb68ab4996432ac5e44c2f503f9881550cd
 
 
 Started GET "/assets/logo-gray-a5a28d1466bbdcf0be5f902fc66e0cda186c8b4eb8aa46c7ed39c2aacef68c1b.png" for 127.0.0.1 at 2016-02-27 19:42:17 +0700
+  [1m[36m (50.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (47.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateContactMessages (20160302051331)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (70.6ms)[0m  [1mCREATE TABLE "contact_messages" ("id" serial primary key, "name" text, "email" text, "subject" text, "message" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160302051331"]]
+  [1m[36m (27.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'contact_messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 08:34:49 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8593.5ms)
+Completed 200 OK in 8771ms (Views: 8752.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 51ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 08:34:58 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (204.3ms)
+Completed 200 OK in 339ms (Views: 330.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/application.self-7293fa7ddfebdd2c1e5ff4163d5d008718aba1dc2265866ae24ba905b5dad535.js?body=1" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 08:38:14 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 08:38:15 +0700
+  [1m[36m (54.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (47.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateContactMessages (20160302051331)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (55.7ms)[0m  [1mCREATE TABLE "contact_messages" ("id" serial primary key, "name" text, "email" text, "subject" text, "message" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160302051331"]]
+  [1m[36m (10.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'contact_messages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 08:44:42 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8196.2ms)
+Completed 200 OK in 8388ms (Views: 8380.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 08:44:51 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 70ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 08:44:51 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 168ms (Views: 167.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (29.3ms)
+Completed 200 OK in 104ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/application.self-7293fa7ddfebdd2c1e5ff4163d5d008718aba1dc2265866ae24ba905b5dad535.js?body=1" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:02:20 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 09:02:21 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 179ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/application.self-43536e7c3bd9f071dbba5713fe150643ea7200b1f3a641e35e94cbe7288ae440.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:19:07 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 09:19:08 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 136ms (Views: 135.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-459ba58f04bc9bd03146bd41208b55b7bdfab4948369afea9f0f5338d284fc38.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:08 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:21:09 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 59ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/application.self-459ba58f04bc9bd03146bd41208b55b7bdfab4948369afea9f0f5338d284fc38.js?body=1" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:22:46 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:22:47 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 119ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/application.self-a88341ab09b740aa1785ef8c693c6dfbdcf24739035b6e254677c24de13a0533.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:26:57 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:26:58 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 133ms (Views: 132.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/application.self-d53763ed593f8fa1342c37871aeb176d0d5a38a96617f925acb2afc5a9975762.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:27:22 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:27:23 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 132ms (Views: 131.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/application.self-fb8a0e5601f0b6e99d439d670904ff31e30f51abb04da25e739e0a4853f72b87.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:28:30 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:28:31 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:28:31 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:28:31 +0700
+
+
+Started GET "/assets/bg-1-desktop-461x544-black-c4c3d12c859ba42c869c24761383781e09c3531aea039b68983e852287b16529.jpg" for 127.0.0.1 at 2016-03-03 09:29:13 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 67ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:17 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/application.self-fb8a0e5601f0b6e99d439d670904ff31e30f51abb04da25e739e0a4853f72b87.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/bg-1-desktop-461x544-black-c4c3d12c859ba42c869c24761383781e09c3531aea039b68983e852287b16529.jpg" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:29:18 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:29:41 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/application.self-fb8a0e5601f0b6e99d439d670904ff31e30f51abb04da25e739e0a4853f72b87.js?body=1" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/bg-1-desktop-461x544-black-c4c3d12c859ba42c869c24761383781e09c3531aea039b68983e852287b16529.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:29:42 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 122ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/application.self-9fe412e7083e831d71256e2d9d30436d0e0398e126158027b346b85b10f626f3.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/bg-1-desktop-461x544-black-c4c3d12c859ba42c869c24761383781e09c3531aea039b68983e852287b16529.jpg" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:30:21 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:30:22 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 69ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/application.self-9fe412e7083e831d71256e2d9d30436d0e0398e126158027b346b85b10f626f3.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:24 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:30:25 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 56ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/application.self-9fe412e7083e831d71256e2d9d30436d0e0398e126158027b346b85b10f626f3.js?body=1" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:30:32 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:30:33 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 62ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/application.self-d53763ed593f8fa1342c37871aeb176d0d5a38a96617f925acb2afc5a9975762.js?body=1" for 127.0.0.1 at 2016-03-03 09:31:03 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:31:04 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 131ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/application.self-9201dfd80644503643588819c9ca98a14129991e3f81433467ae7246dc08756b.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:32:10 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:34:30 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 137ms (Views: 135.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:34:30 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:30 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:30 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:30 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:30 +0700
+
+
+Started GET "/assets/application.self-ff02c28a9510e85b685f192bb9dceca4e5f60e5b053fdbd6bdf6514335150b84.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:34:31 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:34:55 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 72ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/application.self-ff02c28a9510e85b685f192bb9dceca4e5f60e5b053fdbd6bdf6514335150b84.js?body=1" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:34:56 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 09:34:57 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:35:11 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 64ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/application.self-ff02c28a9510e85b685f192bb9dceca4e5f60e5b053fdbd6bdf6514335150b84.js?body=1" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:35:12 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 140ms (Views: 139.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:38:37 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:38:38 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:40:02 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 09:50:10 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 09:50:11 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 10:00:08 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 10:00:09 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:01:17 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `title' for #<#<Class:0x007f763db39dd0>:0x007f7608856378>):
+    1: <% title "Những khoảnh khắc khó quên nơi Công sở" %>
+    2: <!-- lading page -->
+    3: <div class="row" id="landing-page">
+    4: 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  app/views/home/index.html.erb:1:in `_app_views_home_index_html_erb__3396503776583565434_70072462911560'
+
+
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.5ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.1ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/quyhn-hiworld/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 10:02:41 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 10:02:42 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 10:03:49 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 10:03:50 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 10:04:00 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 10:04:01 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fd011c5647d852fa47b6e19b9c8672240af6f34d4d291b2b5af6bd7d6777afc0.css?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 10:04:17 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 10:04:18 +0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-03 10:55:24 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4867.0ms)
+Completed 200 OK in 4982ms (Views: 4974.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f8a833ed95f205842f1dfadbdfc3bc73de3d7b003e0d35b37d009cd171be8f0e.css?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/logo-while-a36557de3631da3fc9508f361391cad874d909f7602db14c675929aad43c07fd.png" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/jquery.inview.min.self-e2bc5928c62fdd354620d55dfcf27d56070af68c2b60e11a5d5ee9a99fd70826.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/jquery.shuffle.min.self-f3e2b36f57d573db2a6758e77d0fe20e2072c4dfba4492197d3e4e4a6933c780.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/jquery.sticky.self-d737b146a1996adcb50542b8eb2c514e47ce9892f0f877d7d044c506cfb20bca.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/smoothscroll.self-fcaa9e7285b419150fdcab0cbf4728d34c07a7f627349da1112c3bfbbab0d54d.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/viewportchecker.self-de65744f268d54eafc0025d097a47aa80b69561b9bbef033621c41e4df1921ed.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/application.self-175b367b444ab10f712cb41682ddc29bf1f2f200cdef74120cb98977e1569305.js?body=1" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/OstrichSans-Medium-615f8bb7ed66950afd20c5ec55f73150bfc1f8fee505ab37c1267e3cc9e50dc1.otf" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/OstrichSans-Bold-9e88c669b76732fbcdab4111bdcd3698fab89243c6ee79dc0b3586d8a244e258.otf" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/linotte-light-26396df49d9703c7cd3dc9f03aae992801ce58d35092cf7ebefb2ea1de38d044.ttf" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/hero-b08e6f3db257eb6ea39ea77be4ca4536d413e0c283bc2a1efed11b2048636124.ttf" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/pre-loader-8d5a7d189e11a76787df0a116636d069e821462ffb3aeca533943ca953b8a4ee.gif" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/bg-1-desktop-1600x1065-black-df8a3180ecec23302ca6cf35afd91bbb4cb30452125e9b5fecef530824f2eaa3.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/logo-gray-5a9dc8383865357b64432ec7758329dbbf055f1aa182aa301f054b843df1fc3a.png" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/avatar-7e5e73c8fd3b6357f0995c45112fb5bb0d2dc411e24dc7d8044965bf99dcfb05.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/congso-club-199c768a51463ec3f468c5ff92a6b56342a42716fc3960c36515fdb9ad96c36f.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/lol-game-card-dbd108493ded7da40f57d7b5b37d087ac8891bb6a941c3644be9507cefd7a879.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/zmessage-dfb9d7b24ad493d4c89705112eda904820ada0253c0a8cdedd630d2f0cd1f978.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/d-brand-watcher-0dabbf60c2a153bada9d8ead4eadd31bd569115490132d6ccf45c2d0b5c05ed0.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/ometric-35d3b80ef81d575124b7f8b8b534fe149f194dd9e20e025098db23f521e97be8.jpg" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/section-divider-365a389acfa3e71a22d47065d35c8bca45932ec6ee0e30754c77a79048172ce6.png" for 127.0.0.1 at 2016-03-03 10:55:29 +0700
+
+
+Started GET "/assets/favicon-eee571b0dd951a3ec48b4a22f3eae63b4652084ad8b523656b40d2302b829eb4.png" for 127.0.0.1 at 2016-03-03 10:55:30 +0700

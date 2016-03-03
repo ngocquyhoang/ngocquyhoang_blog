@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html  lang="en">
 	<head>
-		<title>Ngocquyhoang 's Blog</title>
+		<title><%= yield(:title) + " | NGOCQUYHOANG.COM"%></title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Hello ! my name is Quy. I am a web developer, ruby and ruby on rails is my master programing language. Now I am a student in Hanoi University of Science and Technology. ">
+		<meta name="keywords" content="ngocquyhoang.com, web developer, ngocquyhoang, ngocquyhoang 's profile, hoang ngoc quy, quy hoang ngoc, ngoc quy hoang">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<%= favicon_link_tag 'favicon.png', type: 'image/png' %>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
-		<script type="text/javascript">
-			$(window).load(function() {
-				$(".pre-loader").fadeOut(696);
-				if ($(window).scrollTop() !== 0) {
-					setTimeout(function(){ 
-						$('html, body').stop().animate({
-							scrollTop: $('.container-fluid').offset().top
-						}, 1000);
-					}, 500);
-				};
-				
-			});
-		</script>
 	</head>
-		<body>
-			<div class="container-fluid">
-				<!-- pre loaded -->
-				<div class="pre-loader"></div>
-				<!-- body -->
-				<%= yield %>
-				<!-- footer -->
-				<div class="row footer-section">
-					<p>© Design by <a href="#">Zorba</a> .All rights reserved.</p>
-				</div>
+	<body>
+		<div class="container-fluid">
+			<!-- pre loaded -->
+			<div class="pre-loader"></div>
+			<!-- body -->
+			<%= yield %>
+			<!-- footer -->
+			<div class="row footer-section">
+				<p>© Design by <a href="#">Zorba</a> .All rights reserved.</p>
 			</div>
-		</body>
+		</div>
+	</body>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$(".pre-loader").fadeOut(696);
+			if ($(window).scrollTop() !== 0) {
+				setTimeout(function(){ 
+					$('html, body').stop().animate({
+						scrollTop: $('.container-fluid').offset().top
+					}, 1000);
+				}, 500);
+			};
+		});
+	</script>
 </html>

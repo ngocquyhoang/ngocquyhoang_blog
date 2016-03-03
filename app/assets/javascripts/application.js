@@ -70,6 +70,7 @@ jQuery(function ($) {
 	/*                                    Sticky menu                                 */
 	/*------------------------------------------------------------------------*/
 	jQuery(document).ready(function($) {
+		$(document).on("scroll", onScroll);
 		$("#nav-menu").sticky({topSpacing:0});
 		jQuery('.ngocquy_post').addClass("ngocquy_hidden").viewportChecker({
 			classToAdd: 'ngocquy_visible animated fadeInUp', 
@@ -148,6 +149,28 @@ jQuery(function ($) {
 			}, 1000);
 		};
 	});
+	/*------------------------------------------------------------------------*/
+	/*                    Scroll change active menu                           */
+	/*------------------------------------------------------------------------*/
+	function onScroll(event){
+		var scrollPos = $(document).scrollTop();
+		$('#nav-menu ul.nav li').each(function () {
+			var currentList = $(this);
+			var currentLink = currentList.find('a');
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.length) {
+				var scTop = refElement.offset().top;
+			};
+			var he_el = refElement.outerHeight();
+			if (scTop <= scrollPos &&  scTop + he_el > scrollPos) {
+				$('#nav-menu ul.nav li').removeClass("active");
+				currentList.addClass("active");
+			}
+			else{
+				currentList.removeClass("active");
+			}
+		});
+	}
 })
 function validateEmail(email) {
 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

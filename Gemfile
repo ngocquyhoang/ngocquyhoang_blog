@@ -2,7 +2,10 @@ source 'https://rubygems.org'
 
 # adding gem
 gem 'bootstrap-sass', '~> 3.3.6'
-
+# site map
+gem 'sitemap_generator'
+# schedule
+gem 'whenever'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
