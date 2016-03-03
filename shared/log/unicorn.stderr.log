@@ -1,0 +1,9 @@
+I, [2016-03-03T16:32:03.930383 #6913]  INFO -- : Refreshing Gem list
+I, [2016-03-03T16:32:05.145321 #6913]  INFO -- : listening on addr=/home/ubuntu/ngocquyhoang_blog/shared/sockets/unicorn.sock fd=11
+I, [2016-03-03T16:32:05.145428 #6913]  INFO -- : worker=0 spawning...
+I, [2016-03-03T16:32:05.146865 #6913]  INFO -- : worker=1 spawning...
+I, [2016-03-03T16:32:05.147475 #6917]  INFO -- : worker=0 spawned pid=6917
+I, [2016-03-03T16:32:05.147589 #6917]  INFO -- : worker=0 ready
+I, [2016-03-03T16:32:05.148501 #6913]  INFO -- : master process ready
+I, [2016-03-03T16:32:05.152701 #6920]  INFO -- : worker=1 spawned pid=6920
+I, [2016-03-03T16:32:05.152841 #6920]  INFO -- : worker=1 ready

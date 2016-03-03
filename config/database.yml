@@ -86,4 +86,4 @@ production:
   <<: *default
   database: ngocquyhoang_blog_production
   username: ngocquyhoang_blog
-  password: 'Cbr1000R10yen'
+  password: <%= ENV['NGOCQUYHOANG_BLOG_DATABASE_PASSWORD'] %>
