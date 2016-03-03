@@ -1,9 +1,0 @@
-I, [2016-02-23T09:45:43.198737 #25246]  INFO -- : Refreshing Gem list
-I, [2016-02-23T09:45:44.245902 #25246]  INFO -- : listening on addr=/home/ngocquyhoang/ngocquyhoang_blog/shared/sockets/unicorn.sock fd=11
-I, [2016-02-23T09:45:44.246018 #25246]  INFO -- : worker=0 spawning...
-I, [2016-02-23T09:45:44.247276 #25246]  INFO -- : worker=1 spawning...
-I, [2016-02-23T09:45:44.247854 #25249]  INFO -- : worker=0 spawned pid=25249
-I, [2016-02-23T09:45:44.247972 #25249]  INFO -- : worker=0 ready
-I, [2016-02-23T09:45:44.248678 #25246]  INFO -- : master process ready
-I, [2016-02-23T09:45:44.253353 #25252]  INFO -- : worker=1 spawned pid=25252
-I, [2016-02-23T09:45:44.253484 #25252]  INFO -- : worker=1 ready

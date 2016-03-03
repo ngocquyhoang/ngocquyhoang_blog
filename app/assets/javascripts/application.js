@@ -156,7 +156,7 @@ jQuery(function ($) {
 		var scrollPos = $(document).scrollTop();
 		$('#nav-menu ul.nav li').each(function () {
 			var currentList = $(this);
-			var currentLink = currentList.find('a');
+			var currentLink = currentList.find('a.smooth_scroll');
 			var refElement = $(currentLink.attr("href"));
 			if (refElement.length) {
 				var scTop = refElement.offset().top;

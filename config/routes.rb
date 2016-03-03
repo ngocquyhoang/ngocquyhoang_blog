@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+	match "/404", :to => "errors#not_found", :via => :all
+	match "/500", :to => "errors#internal_server_error", :via => :all
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +10,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   post 'send_message' => 'home#send_message'
+
+  get 'landing' => 'landing_page#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

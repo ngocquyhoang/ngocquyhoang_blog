@@ -57,7 +57,11 @@
 					<li><a href="#about-me" class="smooth_scroll"><i class="fa fa-user"></i> About</a></li>
 					<li><a href="#resume" class="smooth_scroll"><i class="fa fa-graduation-cap"></i> Resume</a></li>
 					<li><a href="#work" class="smooth_scroll"><i class="fa fa-star"></i> Work</a></li>
-					<li><a href="#" class="smooth_scrollsss"><i class="fa fa-heartbeat"></i> Blog</a></li>
+					<li>
+						<%= link_to ( landing_path ) do %>
+							<i class="fa fa-heartbeat"></i> Blog
+						<% end %>
+					</li>
 					<li><a href="#contact" class="smooth_scroll"><i class="fa fa-book"></i> Contact</a></li>
 				</ul>
 				<div class="clearfix"></div>
@@ -473,3 +477,4 @@
 <div class="scroll-up">
 	<a href="#landing-page" class="smooth_scroll"><i class="fa fa-angle-up"></i></a>
 </div>
+

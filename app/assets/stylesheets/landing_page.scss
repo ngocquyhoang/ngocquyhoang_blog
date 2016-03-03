@@ -1,0 +1,57 @@
+// Place all the styles related to the landing_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#coming_soon{
+	min-height: 90vh;
+	.coming-content{
+		padding: 50px 0;
+		.page-title{
+			font-size: 50px;
+			font-family: 'Hero';
+			display: none;
+		}
+		.coming-logo{
+			width: 100%;
+		}
+		.come-back-home{
+			font-size: 40px;
+			font-family: 'Hero';
+			a{
+				text-decoration: none;
+				color: #333333;
+			}
+			margin-bottom: 25px;
+		}
+	}
+}
+/*_______________________________________________________*/
+/*_______________________reponsive_______________________*/
+/*_______________________________________________________*/
+@media (min-width: 320px) and (max-width: 500px){
+	#coming_soon{
+		.come-back-home{
+			font-size: 25px !important;
+		}
+	}
+}
+@media (min-width: 501px) and (max-width: 992px){
+	#coming_soon{
+		.come-back-home{
+			font-size: 30px !important;
+		}
+	}
+}
+@media (min-width: 320px) and (max-width: 992px) {
+	#coming_soon{
+		.coming-content{
+			padding: 120px 0;
+		}
+	}
+}
+@media (min-width: 993px){
+	#coming_soon{
+		.coming-content{
+			padding: 50px 0;
+		}
+	}
+}

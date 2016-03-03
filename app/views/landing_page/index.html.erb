@@ -1,0 +1,15 @@
+<% title "Coming soon" %>
+<div class="row blog-main-page" id="coming_soon">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<!-- render blog menu -->
+		<%= render 'layouts/nav_menu' %>
+		<div class="text-center coming-content">
+			<h1 class="page-title">Coming soon ngocquyhoang</h1>
+			<div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+				<%= image_tag("coming_soon.png", alt: "coming soon image", class: "coming-logo")%>
+			</div>
+			<div class="clearfix"></div>
+			<h2 class="come-back-home"><%= link_to "Come back Home", root_path %></h2>
+		</div>
+	</div>
+</div>
