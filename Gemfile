@@ -6,6 +6,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sitemap_generator'
 # schedule
 gem 'whenever'
+# deploy
+gem 'passenger'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
