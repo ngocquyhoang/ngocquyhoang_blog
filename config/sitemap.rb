@@ -7,8 +7,8 @@ SitemapGenerator::Sitemap.public_path = 'tmp/sitemaps/'
 
 SitemapGenerator::Sitemap.create do
 	# add static
-	# add contact_path
-
+	add landing_path
+  
 	# add permalink
 	# Office.find_each do |image|
 	# add office_path(image.slug), lastmod: image.updated_at
