@@ -35,8 +35,34 @@
 				border-radius: 5em;
 				padding-top: 1em;
 				color: #fff;
+				-webkit-transition: all 400ms;
+				-moz-transition: all 400ms;
+				-o-transition: all 400ms;
+				transition: all 400ms;
 				a{
 					color: #fff;
+					-webkit-transition: all 400ms;
+					-moz-transition: all 400ms;
+					-o-transition: all 400ms;
+					transition: all 400ms;
+				}
+			}
+			li.github:hover{
+				border-color: #000;
+				a{
+					color: #000;
+				}
+			}
+			li.facebook:hover{
+				border-color: #46629E;
+				a{
+					color: #46629E;
+				}
+			}
+			li.twitter:hover{
+				border-color: #1C9CEB;
+				a{
+					color: #1C9CEB;
 				}
 			}
 		}
@@ -101,6 +127,10 @@
 					padding: 10px 25px;
 					text-align: center;
 					line-height: 30px;
+					-webkit-transition: all 400ms;
+					-moz-transition: all 400ms;
+					-o-transition: all 400ms;
+					transition: all 400ms;
 					i{
 						float: left;
 						margin: 0 5px;
